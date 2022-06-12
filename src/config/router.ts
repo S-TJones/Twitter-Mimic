@@ -9,6 +9,7 @@ Vue.use(Router);
 export enum Page {
   Hello = 'hello-world',
   NotFound = 'not-found',
+  TLanding = 't-landing',
 }
 
 export default new Router({
@@ -26,6 +27,17 @@ export default new Router({
         import(
           /* webpackChunkName: "hello-world" */
           '@/pages/hello-world'),
+    },
+    {
+      path: '/landing',
+      name: Page.TLanding,
+      meta: {
+        layout: 'default',
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "landing" */
+          '@/pages/landing'),
     },
     {
       path: '*',
