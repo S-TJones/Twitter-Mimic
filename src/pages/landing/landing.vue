@@ -2,9 +2,9 @@
 <script lang="ts" src="./landing.ts"></script>
 <template>
   <div class="[ landing ]">
-    <div id="top-half" class="[ grid grid-cols-12 gap-0 ][ h-600 ]">
+    <div id="top-half" class="[ grid grid-cols-12 gap-0 ]">
       <div id="left" class="[ col-span-7 ]">
-        <img src="" class="[  ]">
+        <img src="@/assets/twitter/twitter_landing.png" class="[ h-full ]">
       </div>
       <div id="right" class="[ col-span-5 ]">
 
