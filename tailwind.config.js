@@ -4,8 +4,8 @@ module.exports = {
     content: ['./src/**/*.html', './src/**/*.vue', './src/**/*.jsx'],
     // These options are passed through directly to PurgeCSS
     options: {
-      whitelist: [],
-    },
+      whitelist: []
+    }
   },
   theme: {
     /**
@@ -18,37 +18,38 @@ module.exports = {
       inherit: 'inherit',
       transparent: 'transparent',
       white: 'var(--white)',
+      twitterblue: 'var(--twitter-blue)',
       app: {
         background: 'var(--app-background)',
-        footer: 'var(--app-footer)',
+        footer: 'var(--app-footer)'
       },
       typography: {
         primary: 'var(--typography-primary)',
         secondary: 'var(--typography-secondary)',
         success: 'var(--typography-success)',
         error: 'var(--typography-error)',
-        light: 'var(--typography-light)',
+        light: 'var(--typography-light)'
       },
       button: {
-        'success': 'var(--button-success)',
-        'failure': 'var(--button-failure)',
-      },
+        success: 'var(--button-success)',
+        failure: 'var(--button-failure)'
+      }
     },
     fontSize: {
-      'xs': '.75rem',
-      'sm': '.875rem',
-      'base': '1rem',
-      'lg': '1.125rem',
-      'xl': '1.25rem',
+      xs: '.75rem',
+      sm: '.875rem',
+      base: '1rem',
+      lg: '1.125rem',
+      xl: '1.25rem',
       '2xl': '1.5rem',
       '3xl': '1.875rem',
       '4xl': '2.25rem',
       '5xl': '3rem',
       '6xl': '4rem',
       '7xl': '5rem',
-      '8xl': '6rem',
+      '8xl': '6rem'
     }
   },
   variants: {},
-  plugins: [],
+  plugins: []
 };
