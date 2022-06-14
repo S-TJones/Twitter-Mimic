@@ -1,4 +1,19 @@
 .landing {
     // Write your styles here.
     background-color: white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+#right {
+    width: 45%;
+    // max-width: 50%;
+}
+
+#left > img {
+    max-height: calc(100vh - 60px);
+}
+
+#legal-stuff {
+    width: 300px;
+    max-width: 380px;
 }

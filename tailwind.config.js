@@ -19,6 +19,8 @@ module.exports = {
       transparent: 'transparent',
       white: 'var(--white)',
       twitterblue: 'var(--twitter-blue)',
+      twittergray: 'var(--twitter-gray)',
+
       app: {
         background: 'var(--app-background)',
         footer: 'var(--app-footer)'
@@ -48,6 +50,9 @@ module.exports = {
       '6xl': '4rem',
       '7xl': '5rem',
       '8xl': '6rem'
+    },
+    minWidth: {
+      '1/2': '50%'
     }
   },
   variants: {},
