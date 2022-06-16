@@ -3,11 +3,16 @@
 <template>
   <div class="[ landing ]">
     <div id="top-half" class="[ flex flex-row ]">
-      <div id="left" class="[  ]">
-        <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" class="[ h-full ]">
+      <div id="left">
+        <div class="[ max-h-screen ]">
+            <div id="image" class="[ max-w-full ][ h-screen ][ bg-cover bg-no-repeat bg-center ][ overflow-hidden ]">
+              <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" class="[ max-w-screen ][ max-h-screen ][ invisible ]">
+            </div>
+        </div>
       </div>
+      
       <div id="right" class="[ flex justify-center flex-col p-4 min-w-1/2 ]">
-        <div>
+        <div class="[  ]">
           <img src="@/assets/twitter/twitter_logo.jpg" alt="twitter logo" class="[ h-12 w-12 ]">
         </div>
         <div>

@@ -17,3 +17,12 @@
     width: 300px;
     max-width: 380px;
 }
+
+#image {
+    background-image: url(https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png);
+}
+#image:after
+{
+    content: '.';
+    visibility: hidden;
+}
