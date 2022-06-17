@@ -1,17 +1,13 @@
 <style scoped lang="scss" src="./landing.scss"></style>
 <script lang="ts" src="./landing.ts"></script>
 <template>
-  <div class="[ landing ]">
-    <div id="top-half" class="[ flex flex-row ]">
-      <div id="left">
-        <div class="[ max-h-screen ]">
-            <div id="image" class="[ max-w-full ][ h-screen ][ bg-cover bg-no-repeat bg-center ][ overflow-hidden ]">
-              <img src="https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png" class="[ max-w-screen ][ max-h-screen ][ invisible ]">
-            </div>
-        </div>
+  <div class="[ landing flex flex-col ]">
+    <div id="top-half" class="[ flex flex-row flex-1 ]">
+      <div id="left" class="[ w-full ]">
+        <div id="image" class="[ w-full h-full ][ bg-cover bg-no-repeat bg-center ][ overflow-hidden ]"></div>
       </div>
       
-      <div id="right" class="[ flex justify-center flex-col p-4 min-w-1/2 ]">
+      <div id="right" class="[ flex justify-center flex-col p-4 ]">
         <div class="[  ]">
           <img src="@/assets/twitter/twitter_logo.jpg" alt="twitter logo" class="[ h-12 w-12 ]">
         </div>
@@ -23,9 +19,9 @@
           <a href="#" class="[ no-underline px-4 py-2 rounded-3xl border border-twittergray text-center w-64 mb-2 ]">Sign up with Google</a>
           <a href="#" class="[ no-underline px-4 py-2 rounded-3xl border border-twittergray text-center w-64 ]">Sign up with Apple</a>
           <div class="[ flex flex-row p-2 items-center ]">
-            <div class="[ border-black border w-24 min-w-0 ]"></div>
+            <div class="[ separator ]"></div>
             <p class="[ px-2 ]">or</p>
-            <div class="[ border-black border w-24 min-w-0 ]"></div>
+            <div class="[ separator ]"></div>
           </div>
           <a href="#" class="[ no-underline text-white bg-twitterblue py-3 rounded-3xl w-64 inline-block font-bold leading-5 text-sm px-4 text-center mb-2 ]">Sign up with phone or email</a>
           <p id="legal-stuff" class="[ leading-3 text-xs mb-5 ]">

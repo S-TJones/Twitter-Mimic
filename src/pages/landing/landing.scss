@@ -1,16 +1,45 @@
+
+@font-face {
+    font-family: 'TwitterChirpExtendedHeavy';
+    src: url(../../assets/twitter/fonts/chirp-regular-web.woff);
+    font-style: normal;
+    font-weight: 400;
+}
+@font-face {
+    font-family: 'TwitterChirpExtendedHeavy';
+    src: url(../../assets/twitter/fonts/chirp-extended-heavy-web.woff);
+    font-style: normal;
+    font-weight: 700;
+}
+// @font-face {
+//     font-family: 'TwitterChirpExtendedHeavy';
+//     src: url(../../assets/twitter/fonts/chirp-regular-web.woff);
+//     font-style: normal;
+//     font-weight: 100;
+// }
+
 .landing {
     // Write your styles here.
     background-color: white;
-    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    p {
+        
+        font-family: "TwitterChirpExtendedHeavy";
+    }
 }
 
 #right {
     width: 45%;
+    @apply min-w-1/2;
     // max-width: 50%;
 }
 
-#left > img {
-    max-height: calc(100vh - 60px);
+.separator {
+    @apply border-twittergray;
+    @apply border;
+    @apply border-l-0;
+    @apply border-r-0;
+    @apply border-b-0;
+    @apply w-24;
 }
 
 #legal-stuff {
@@ -21,8 +50,9 @@
 #image {
     background-image: url(https://abs.twimg.com/sticky/illustrations/lohp_en_1302x955.png);
 }
-#image:after
-{
-    content: '.';
-    visibility: hidden;
-}
+// #image:after
+// {
+//     content: '.';
+//     visibility: hidden;
+// }
+
