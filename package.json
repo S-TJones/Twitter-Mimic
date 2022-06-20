@@ -21,10 +21,11 @@
     "serve:design-system": "run-s setup-ds-webpack launch-design-system"
   },
   "dependencies": {
-    "@fortawesome/fontawesome-svg-core": "^1.2.35",
-    "@fortawesome/free-solid-svg-icons": "^5.15.3",
-    "@fortawesome/vue-fontawesome": "^2.0.2",
+    "@fortawesome/fontawesome-svg-core": "^1.2.36",
+    "@fortawesome/free-solid-svg-icons": "^5.15.4",
+    "@fortawesome/vue-fontawesome": "^2.0.8",
     "axios": "^0.21.1",
+    "buefy": "^0.9.21",
     "core-js": "^2.6.11",
     "deepmerge": "^4.2.2",
     "favicons": "^6.2.0",

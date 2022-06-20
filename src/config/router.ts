@@ -16,6 +16,11 @@ export default new Router({
   mode: 'history',
   base: process.env.BASE_URL,
   routes: [
+    {
+      path: '/buefy-sample',
+      name: 'buefy-sample',
+      component: require('@/pages/buefy-sample/buefy-sample.vue').default
+    },
     ...generatedRoutes,
     {
       path: '/',

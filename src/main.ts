@@ -4,6 +4,12 @@ import App from '@/pages/app/app.vue';
 import store from '@/store';
 import '@/theme/_all.scss';
 import Vue from 'vue';
+import Buefy from 'buefy';
+
+Vue.use(Buefy, {
+	defaultIconComponent: 'font-awesome-icon',
+	defaultIconPack: 'fas',
+});
 
 Vue.config.productionTip = false;
 
