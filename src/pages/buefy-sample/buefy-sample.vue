@@ -17,14 +17,37 @@ export default class extends Vue {}
 <template>
   <div class="[ text-center ]">
     <b-dropdown aria-role="list">
-      <button class="button" slot="trigger" slot-scope="{ active }">
-        <span>Click me!</span>
-        <BIcon pack="fas" :icon="active ? 'chevron-up' : 'chevron-down'" />
-      </button>
+      <template #trigger="{ active }">
+          <b-button
+            label="Click me!"
+            :icon-right="active ? 'chevron-up' : 'chevron-down'" />
+      </template>
 
       <b-dropdown-item aria-role="listitem">Action</b-dropdown-item>
       <b-dropdown-item aria-role="listitem">Another action</b-dropdown-item>
       <b-dropdown-item aria-role="listitem">Something else</b-dropdown-item>
     </b-dropdown>
+    <b-button type="is-danger"
+        icon-left="trash">
+        Delete, does it wrap
+    </b-button>
+    <b-button tag="router-link"
+      to="/landing"
+      type="is-link"
+      rounded>
+      To Twitter
+  </b-button>
+  <b-field label="Select a color">
+    <b-colorpicker class="[ c-picker ]" value="#7957d5" />
+  </b-field>
   </div>
 </template>
+
+<style lang="scss">
+.c-picker .dropdown-menu {
+  width: 500px;
+  & .colorpicker-content {
+    height: 500px !important;
+  }
+}
+</style>

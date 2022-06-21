@@ -19,6 +19,7 @@ import {
   faPencilAlt,
   faSearch,
   faTrashAlt,
+  faTrash,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -43,6 +44,7 @@ library.add(
   faSearch,
   faEye,
   faEyeSlash,
+  faTrash
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';
