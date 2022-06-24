@@ -19,7 +19,10 @@ export default new Router({
     {
       path: '/buefy-sample',
       name: 'buefy-sample',
-      component: require('@/pages/buefy-sample/buefy-sample.vue').default
+      component: require('@/pages/buefy-sample/buefy-sample.vue').default,
+      meta: {
+        layout: 'home',
+      },
     },
     ...generatedRoutes,
     {
