@@ -18,7 +18,7 @@ export default class extends Vue {}
   <div class="[ text-center ]">
     <b-dropdown aria-role="list">
       <template #trigger="{ active }">
-          <b-button
+          <b-button class="[ border-0 shadow-none  ]"
             label="Click me!"
             :icon-right="active ? 'chevron-up' : 'chevron-down'" />
       </template>
