@@ -10,6 +10,7 @@ export enum Page {
   Hello = 'hello-world',
   NotFound = 'not-found',
   TLanding = 't-landing',
+  TDash = 't-dash',
 }
 
 export default new Router({
@@ -46,6 +47,17 @@ export default new Router({
         import(
           /* webpackChunkName: "landing" */
           '@/pages/landing'),
+    },
+    {
+      path: '/Dash',
+      name: Page.TDash,
+      meta: {
+        layout: 'home',
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "Dash" */
+          '@/pages/dash'),
     },
     {
       path: '*',

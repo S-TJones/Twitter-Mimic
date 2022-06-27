@@ -1,10 +1,12 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { Dictionary } from 'vue-router/types/router';
 import AppFooter from '@/components/app-footer';
+import AsideMenu from '@/components/aside-menu';
 
 @Component({
   components: {
-    AppFooter
+    AppFooter,
+    AsideMenu,
   },
   name: 'home',
 })
