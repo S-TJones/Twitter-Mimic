@@ -2,13 +2,13 @@
 <script lang="ts" src="./dash.ts"></script>
 <template>
   <div class="[ dash ][ w-full ]">
-    <div class="[ flex flex-row justify-between ]">
-      <h1>Home</h1>
-      <i></i>
+    <div class="[ h-12 w-full ][ flex flex-row justify-between items-center ][ px-4 mx-auto ]">
+      <p class="[ text-base ]">Home</p>
+      <i class="[ h-8 w-12 ]"></i>
     </div>
-    <form class="[  ]">
+    <form class="[ pt-1 ]">
       <div class="[  ]">
-        <img src="#" alt="user_profile_pic" class="[ rounded-full h-16 w-16 ][ flex items-center justify-center ]">
+        <img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ rounded-full h-16 w-16 ][ flex items-center justify-center ]">
       </div>
       <div class="[  ]">
         <textarea name="tpost" id="tpost" cols="30" rows="3" placeholder="What's happening?"></textarea>

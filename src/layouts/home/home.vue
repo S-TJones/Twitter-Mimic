@@ -14,7 +14,7 @@
       <router-view />
     </transition>
 
-    <div class="[ w-1/4 h-full ][ border border-twittergray ][ flex flex-col ]">
+    <div class="[ w-1/3 h-full ][ border border-twittergray ][ flex flex-col ]">
       <div>
         <h3>Trends for you</h3>
       </div>

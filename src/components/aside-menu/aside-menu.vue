@@ -3,17 +3,17 @@
 <template>
   <div class="[ aside-menu ][]">
     <div>
-      <img src="" alt="" srcset="">
+      <img src="@/assets/twitter/twitter_logo.jpg" alt="logo" srcset="">
     </div>
     <div class="[ flex flex-col items-center ]">
-      <a href="#" class="[ no-underline ]">Home</a>
-      <a href="#" class="[ no-underline ]">Explore</a>
-      <a href="#" class="[ no-underline ]">Notifications</a>
-      <a href="#" class="[ no-underline ]">Messages</a>
-      <a href="#" class="[ no-underline ]">Bookmarks</a>
-      <a href="#" class="[ no-underline ]">Lists</a>
-      <a href="#" class="[ no-underline ]">Profile</a>
-      <a href="#" class="[ no-underline ]">More</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl font-bold ]">Home</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Explore</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Notifications</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Messages</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Bookmarks</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Lists</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">Profile</a>
+      <a href="#" class="[ no-underline ][ text-black p-3 text-xl ]">More</a>
       <b-button rounded>Tweet</b-button>
     </div>
   </div>

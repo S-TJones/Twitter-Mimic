@@ -18,6 +18,7 @@ module.exports = {
       inherit: 'inherit',
       transparent: 'transparent',
       white: 'var(--white)',
+      black: 'var(--black)',
       twitterblue: 'var(--twitter-blue)',
       twittergray: 'var(--twitter-gray)',
 
