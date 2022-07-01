@@ -19,10 +19,17 @@
             <i></i>
             <i></i>
           </div>
-          <!-- Switch this button with a Buefy button -->
+          <!-- Switch this button with a Buefy button -->''
           <button type="submit">Tweet</button>
         </div>
       </div>
     </form>
+    <hr>
+    <div class="[ my-1 ]"></div>
+    <div class="post [ h-full max-w-xl ][ mx-auto ]">
+      <div class="[ border-b ]">
+
+      </div>
+    </div>
   </div>
 </template>
