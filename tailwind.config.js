@@ -21,6 +21,8 @@ module.exports = {
       black: 'var(--black)',
       twitterblue: 'var(--twitter-blue)',
       twittergray: 'var(--twitter-gray)',
+      twittergreyt: 'var(--twitter-greyt)',
+      twittergrey: 'var(--twitter-grey)',
 
       app: {
         background: 'var(--app-background)',

@@ -27,7 +27,7 @@
     <hr>
     <div class="[ my-1 ]"></div>
     <!--  -->
-    <div class="post [ w-full max-w-xl ][ mx-auto ][ text-sm ][ border ]">
+    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ]">
       <div class="[ px-4 ][ w-full ]">
         <div class="[ flex flex-col flex-shrink flex-grow ]">
           <div class="[ flex flex-col ]">
@@ -73,7 +73,7 @@
       </div>
     </div>
     <!--  -->
-    <div class="post [ w-full max-w-xl ][ mx-auto ][ text-sm ][ border ]">
+    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ]">
       <div class="[ px-4 ][ w-full ]">
         <div class="[ flex flex-col flex-shrink flex-grow ]">
           <div class="[ flex flex-col ]">
@@ -92,13 +92,13 @@
                     Yes yes you should definitely take lots of videos of these fireworks. You will definitely watch the videos later
                   </div>
                   <div class="post-image [ mt-3 ]">
-                    <div><img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;"></div>
+                    <div><img src="" alt="" class="[  ]"></div>
                     <div></div>
                   </div>
                   <div class="post-buttons [ flex flex-row justify-between ][ mt-3 ]">
                     <div class="[ flex justify-start ]">
                       <i></i>
-                      <p class="[ px-3 ]">{{temp}}343</p>
+                      <p class="[ px-3 ]">343</p>
                     </div>
                     <div class="[ flex justify-start ]">
                       <i></i>
