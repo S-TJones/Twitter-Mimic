@@ -73,7 +73,12 @@
             <img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ mr-3 ][ flex items-center justify-center ]" style="border-radius: 50%;">
           </div>
           <div class="[ flex flex-col ]">
-            <p class="[ font-bold ]">Steam Support</p>
+            <p class="[ font-bold ]">Steam Support 
+              <b-icon
+                icon="certificate"
+                size="is-small">
+              </b-icon>
+            </p>
             <p class="[ text-twittergreyt ]">@Steam_Support</p>
           </div>
           <div class="[ ml-auto ][ flex items-center ]">

@@ -14,7 +14,7 @@ class Home extends Vue {
   // --------------------------------------------------------------------------
   // [Private] Fields
   // --------------------------------------------------------------------------
-  private trends: {location: string; name: string; tweet_count: string}[] = [
+  private readonly trends: {location: string; name: string; tweet_count: string}[] = [
     {
       'location': 'Trending in Jamaica',
       'name': 'WhatsApp',

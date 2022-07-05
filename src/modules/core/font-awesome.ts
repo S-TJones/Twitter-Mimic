@@ -20,6 +20,9 @@ import {
   faSearch,
   faTrashAlt,
   faTrash,
+  faHashtag,
+  faIdBadge,
+  faCertificate,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -44,7 +47,9 @@ library.add(
   faSearch,
   faEye,
   faEyeSlash,
-  faTrash
+  faTrash,
+  faHashtag,
+  faCertificate
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';
