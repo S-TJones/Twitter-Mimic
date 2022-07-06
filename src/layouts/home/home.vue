@@ -3,7 +3,7 @@
 <template>
 
 <div class="[ home ][ flex flex-row ]" style="background-color: white;">
-  <aside class="[ w-1/4 h-full ][ border border-twittergray ][ flex justify-center items-center ]">
+  <aside class="[ relative ][ w-1/4 ][ border-r border-twittergray ][ flex justify-center ]">
     <AsideMenu customProp="" />
   </aside>
   

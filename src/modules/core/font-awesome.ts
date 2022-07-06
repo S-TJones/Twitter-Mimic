@@ -23,6 +23,13 @@ import {
   faHashtag,
   faIdBadge,
   faCertificate,
+  faEllipsisH,
+  faHouseUser,
+  faBell,
+  faEnvelope,
+  faBookmark,
+  faList,
+  faUser,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -49,7 +56,14 @@ library.add(
   faEyeSlash,
   faTrash,
   faHashtag,
-  faCertificate
+  faCertificate,
+  faEllipsisH,
+  faHouseUser,
+  faBell,
+  faEnvelope,
+  faBookmark,
+  faList,
+  faUser,
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';
