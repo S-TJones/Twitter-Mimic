@@ -63,9 +63,9 @@
       </div> -->
       <b-button rounded class="[ w-full my-4 ][ font-bold text-base ][ text-white bg-twitterblue ]" style="height: 52px;">Tweet</b-button>
     </div>
-    <div class="[ flex flex-row items-center ][ my-3 p-3 ][ rounded-full ]">
-      <div class="[ leading-5 ][ py-1 ][ border rounded-full]">
-        <img src="@/assets/twitter/twitter_logo.jpg" alt="logo" class="[ h-10 w-10 ]">
+    <div class="[ flex flex-row items-center ][ my-3 px-3 ][ rounded-full ][ cursor-pointer hover:bg-twittergrey ]">
+      <div class="[ leading-5 ][ py-1 ]">
+        <img src="@/assets/twitter/twitter_logo.jpg" alt="logo" class="[ h-10 w-10 ]" style="border-radius: 50%;">
       </div>
       <div class="[ flex flex-col ][ mx-3 ]">
         <p>Shemar Jones</p>
