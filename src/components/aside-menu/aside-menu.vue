@@ -9,7 +9,7 @@
 
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
-          <b-icon icon="houseuser" size="is-small"></b-icon>
+          <b-icon icon="house-user" size="is-small"></b-icon>
           <div class="[ mr-4 ml-5 ][ leading-6 text-xl ][ font-bold ]">Home</div>
         </div>
       </a>
@@ -34,7 +34,7 @@
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
           <b-icon icon="bookmark" size="is-small"></b-icon>
-          <div class="[ mr-4 ml-5 ][ leading-6 text-xl ]">BookMarks</div>
+          <div class="[ mr-4 ml-5 ][ leading-6 text-xl ]">Bookmarks</div>
         </div>
       </a>
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
@@ -51,7 +51,7 @@
       </a>
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
-          <b-icon icon="ellipsish" size="is-small"></b-icon>
+          <b-icon icon="ellipsis-h" size="is-small"></b-icon>
           <div class="[ mr-4 ml-5 ][ leading-6 text-xl ]">More</div>
         </div>
       </a>

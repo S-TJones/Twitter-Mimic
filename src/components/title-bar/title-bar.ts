@@ -1,63 +1,48 @@
-import { Component, Vue } from 'vue-property-decorator';
-import { Dictionary } from 'vue-router/types/router';
-import AppFooter from '@/components/app-footer';
-import AsideMenu from '@/components/aside-menu';
-import Trending from '@/components/trending';
-import TitleBar from '@/components/title-bar';
+import { Component, Prop, Vue } from 'vue-property-decorator';
 
 @Component({
-  components: {
-    AppFooter,
-    AsideMenu,
-    Trending,
-    TitleBar,
-  },
-  name: 'home',
+  components: {},
+  name: 'title-bar',
 })
-class Home extends Vue {
+
+
+class TitleBar extends Vue {
   // --------------------------------------------------------------------------
-  // [Private] Fields
+  // Fields
   // --------------------------------------------------------------------------
 
   // --------------------------------------------------------------------------
-  // [Public] Constructor
+  // Props
   // --------------------------------------------------------------------------
-
+  @Prop({ default: 'default' }) public customProp!: string;
+  // --------------------------------------------------------------------------
+  // Constructor
+  // --------------------------------------------------------------------------
   constructor() {
     super();
   }
 
   // --------------------------------------------------------------------------
-  // [Public] Accessors
+  // Accessors
   // --------------------------------------------------------------------------
 
   // --------------------------------------------------------------------------
-  // [Public] Methods
-  // --------------------------------------------------------------------------
-
-  public async navigate(path: string, params?: Dictionary<string>) {
-    await this.$router.push({ path, params });
-  }
-
-  // --------------------------------------------------------------------------
-  // [Private] Event Handlers
+  // Methods
   // --------------------------------------------------------------------------
 
   // --------------------------------------------------------------------------
-  // [Private] Methods
+  // Event Handlers
   // --------------------------------------------------------------------------
 
   // --------------------------------------------------------------------------
-  // [Private] Lifecycle Hooks
+  // Lifecycle Hooks
   // --------------------------------------------------------------------------
-
-  private mounted() {
+  public mounted() {
     // TODO: stuff to do when this component loads.
-
   }
 }
 
 export {
-  Home as default,
-  Home,
+  TitleBar as default,
+  TitleBar,
 };

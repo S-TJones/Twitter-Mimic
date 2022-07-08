@@ -37,7 +37,7 @@ module.exports = {
       },
       button: {
         success: 'var(--button-success)',
-        failure: 'var(--button-failure)'
+        failure: 'var(--button-error)'
       }
     },
     fontSize: {

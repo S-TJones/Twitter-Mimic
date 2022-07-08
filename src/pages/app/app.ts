@@ -1,8 +1,10 @@
 import { Component, Vue } from 'vue-property-decorator';
 import { Route } from 'vue-router';
+import Home from '@/layouts/home';
+import Main from '@/layouts/default';
 
 @Component({
-  components: {},
+  components: {Home, Main},
   name: 'app',
 })
 export default class AppView extends Vue {

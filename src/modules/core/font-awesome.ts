@@ -30,6 +30,10 @@ import {
   faBookmark,
   faList,
   faUser,
+  faComment,
+  faRetweet,
+  faHeart,
+  faShare
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -64,6 +68,10 @@ library.add(
   faBookmark,
   faList,
   faUser,
+  faComment,
+  faRetweet,
+  faHeart,
+  faShare
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';

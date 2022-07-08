@@ -27,14 +27,14 @@
     <hr>
     <div class="[ my-1 ]"></div>
     <!--  -->
-    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ]">
+    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ][ cursor-pointer ]">
       <div class="[ px-4 ][ w-full ]">
         <div class="[ flex flex-col flex-shrink flex-grow ]">
           <div class="[ flex flex-col ]">
             <div class="[ pt-3 ][ mb-1 ]"></div>
             <div class="[ flex flex-row ]">
               <div class="[ mr-3 ][ flex-shrink-0 flex justify-center ]">
-                <img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
+                <img src="@/assets/twitter/marvel.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
               </div>
               <div class="[ pb-3 ][ flex flex-col justify-center ]">
                 <div class="[ mb-1 ][ flex flex-row justify-between items-start ]">
@@ -47,24 +47,31 @@
                     Experience the cinematic event, Marvel Studios’ #ThorLoveAndThunder, only in theaters this Friday! Get tickets now: http://fandango.com/ThorLoveAndThunder
                   </div>
                   <div class="post-image [ mt-3 ]">
-                    <div><img src="" alt="" class="[  ]"></div>
-                    <div>From Thor</div>
+                    <div class="[ overflow-hidden ][ h-full ]">
+                      <img src="@/assets/twitter/thor_love_thunder.jpg" alt="#ThorLoveAndThunder" class="[ border border-twittergreyt rounded-2xl rounded-b-none border-b-0 ][ w-full ]">
+                    </div>
+                    <div class="[ w-full ][ p-3 ][ rounded-2xl rounded-t-none border border-twittergreyt ]">
+                      <p>From Thor</p>
+                    </div>
                   </div>
                   <div class="post-buttons [ flex flex-row justify-between ][ mt-3 ]">
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ][ hover:text-twitterblue ]">
+                      <b-icon icon="comment" size="is-small"></b-icon>
                       <p class="[ px-3 ]">33</p>
                     </div>
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ][ hover:text-typography-success ]">
+                      <b-icon icon="retweet" size="is-small"></b-icon>
                       <p class="[ px-3 ]">247</p>
                     </div>
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ][ hover:text-button-failure ]"><!-- Check SASS colors and it's not there -->
+                      <b-icon icon="heart" size="is-small"></b-icon>
                       <p class="[ px-3 ]">2465</p>
                     </div>
-                    <div class="[ flex justify-start ]"><i></i></div>
+                    <div class="[ flex justify-start items-center ][ hover:text-twitterblue ]">
+                      <b-icon icon="share" size="is-small"></b-icon>
+                    </div>
                   </div>
+                  <div class="promoted [ mt-3 ]"></div>
                 </div>
               </div>
             </div>
@@ -80,7 +87,7 @@
             <div class="[ pt-3 ][ mb-1 ]"></div>
             <div class="[ flex flex-row ]">
               <div class="[ mr-3 ][ flex-shrink-0 flex justify-center ]">
-                <img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
+                <img src="@/assets/twitter/Marques_Brownlee_cropped.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
               </div>
               <div class="[ pb-3 ][ flex flex-col justify-center ]">
                 <div class="[ mb-1 ][ flex flex-row justify-between items-start ]">
@@ -96,20 +103,23 @@
                     <div></div>
                   </div>
                   <div class="post-buttons [ flex flex-row justify-between ][ mt-3 ]">
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ]">
+                      <b-icon icon="comment" size="is-small"></b-icon>
                       <p class="[ px-3 ]">343</p>
                     </div>
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ]">
+                      <b-icon icon="retweet" size="is-small"></b-icon>
                       <p class="[ px-3 ]">1984</p>
                     </div>
-                    <div class="[ flex justify-start ]">
-                      <i></i>
+                    <div class="[ flex justify-start items-center ]">
+                      <b-icon icon="heart" size="is-small"></b-icon>
                       <p class="[ px-3 ]">37.8K</p>
                     </div>
-                    <div class="[ flex justify-start ]"><i></i></div>
+                    <div class="[ flex justify-start items-center ]">
+                      <b-icon icon="share" size="is-small"></b-icon>
+                    </div>
                   </div>
+                  <div class="promoted [ mt-3 ]"></div>
                 </div>
               </div>
             </div>

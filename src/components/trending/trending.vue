@@ -36,7 +36,7 @@
         <div class="trend [ py-3 px-4 ]" v-for="trend in getTrends()">
           <div class="[ flex flex-col ]">
             <div class="[ flex flex-row justify-between items-center ]">
-              <p class="[ text-base text-twittergreyt ]">{{ trend.location }}</p>
+              <p class="[ text-sm text-twittergreyt ]">{{ trend.location }}</p>
               <div class="[ h-full ][ flex items-center ]">...</div>
             </div>
             <p class="[ font-bold ][ leading-5 ]">{{ trend.name }}</p>
@@ -45,7 +45,7 @@
         </div>
         <!-- Trend Section | END -->
         <div class="[ p-4 ]">
-          <a href="#" class="[ no-underline ]">Show more</a>
+          <a href="#" class="[ no-underline ][ text-twitterblue ]">Show more</a>
         </div>
       </div>
       <!--  -->
