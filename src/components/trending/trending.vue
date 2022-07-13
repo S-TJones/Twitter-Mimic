@@ -33,7 +33,7 @@
           </div>
         </div>
         <!-- V-For Loop | Test -->
-        <div class="trend [ py-3 px-4 ]" v-for="trend in getTrends()">
+        <div class="trend [ py-3 px-4 ]" v-for="(trend, index) in getTrends()">
           <div class="[ flex flex-col ]">
             <div class="[ flex flex-row justify-between items-center ]">
               <p class="[ text-sm text-twittergreyt ]">{{ trend.location }}</p>
@@ -96,13 +96,27 @@
             <p class="[ text-twittergreyt ]">@elonmusk</p>
           </div>
           <div class="[ ml-auto ][ flex items-center ]">
-            <button class="[ bg-black text-white ][ px-4 py-1 ml-3 ][ font-bold ][ rounded-3xl ]">Follow</button>
+            <b-button class="[ bg-black text-white ][ px-4 py-1 ml-3 ][ font-bold ][ rounded-3xl ][ text-base ]" label="Unfollow" type="is-primary" @click="isPopUpModalActive = true" />
           </div>
         </div>
         <div class="[ p-4 ]">
           <a href="#" class="[ no-underline ]">Show more</a>
         </div>
       </div>
+
+      <b-modal v-model="isPopUpModalActive">
+        <div class="[ rounded-2xl ][ p-8 ]">
+          <div class="[ flex flex-col ]">
+            <h1 class="[ mb-2 ][ leading-6 text-xl font-bold ]">Unfollow ...</h1>
+            <div class="[ text-twittergreyt ][ font-normal text-base ][ leading-5 ]">
+              <p>Their Tweets will no longer show up in your home timeline. You can still view their profile, unless their Tweets are protected. </p>
+            </div>
+            <div class="[ mt-6 ][ w-full ][ flex flex-col ]">
+
+            </div>
+          </div>
+        </div>
+      </b-modal>
 
     </div>
   </div>

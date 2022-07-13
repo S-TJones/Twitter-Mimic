@@ -33,7 +33,9 @@ import {
   faComment,
   faRetweet,
   faHeart,
-  faShare
+  faShare,
+  faMars,
+  faVenus
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -71,7 +73,9 @@ library.add(
   faComment,
   faRetweet,
   faHeart,
-  faShare
+  faShare,
+  faMars,
+  faVenus
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';

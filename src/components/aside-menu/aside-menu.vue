@@ -7,24 +7,24 @@
         <img src="@/assets/twitter/twitter_logo.jpg" alt="logo" class="[  ]" style="width: 40px;height: 40px;">
       </div>
 
-      <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
+      <router-link :to="{ path: '/dashboard' }" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
           <b-icon icon="house-user" size="is-small"></b-icon>
           <div class="[ mr-4 ml-5 ][ leading-6 text-xl ][ font-bold ]">Home</div>
         </div>
-      </a>
+      </router-link>
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
           <b-icon icon="hashtag" size="is-small"></b-icon>
           <div class="[ mr-4 ml-5 ][ leading-6 text-xl ]">Explore</div>
         </div>
       </a>
-      <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
+      <router-link :to="{ path: '/notification' }" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
           <b-icon icon="bell" size="is-small"></b-icon>
           <div class="[ mr-4 ml-5 ][ leading-6 text-xl ]">Notifications</div>
         </div>
-      </a>
+      </router-link>
       <a href="#" class="[ no-underline ][ py-1 w-full ][ text-black text-xl ]">
         <div class="[ flex flex-row items-center ][ p-3 ][ rounded-full ]">
           <b-icon icon="envelope" size="is-small"></b-icon>

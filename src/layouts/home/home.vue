@@ -12,7 +12,7 @@
     </aside>
     
     <!-- Body -->
-    <div class="[ flex flex-row ][ max-w-full w-full ]">
+    <div class="[ flex flex-row ][ ]" style="width: 990px;">
 
       <transition name="fade">
         <router-view />

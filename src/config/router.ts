@@ -11,6 +11,7 @@ export enum Page {
   NotFound = 'not-found',
   TLanding = 't-landing',
   TDash = 't-dash',
+  TNotifi = 't-notifi',
 }
 
 export default new Router({
@@ -49,7 +50,7 @@ export default new Router({
           '@/pages/landing'),
     },
     {
-      path: '/Dash',
+      path: '/Dashboard',
       name: Page.TDash,
       meta: {
         layout: 'home',
@@ -58,6 +59,17 @@ export default new Router({
         import(
           /* webpackChunkName: "Dash" */
           '@/pages/dash'),
+    },
+    {
+      path: '/Notification',
+      name: Page.TNotifi,
+      meta: {
+        layout: 'home',
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "Notification" */
+          '@/pages/notification'),
     },
     {
       path: '*',

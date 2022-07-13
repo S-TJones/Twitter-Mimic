@@ -10,6 +10,7 @@ class Trending extends Vue {
   // --------------------------------------------------------------------------
   // Fields
   // --------------------------------------------------------------------------
+  private isPopUpModalActive: boolean = false;
   private readonly trends: {location: string; name: string; tweet_count: string}[] = [
     {
       'location': 'Trending in Jamaica',
@@ -62,6 +63,7 @@ class Trending extends Vue {
   // --------------------------------------------------------------------------
   constructor() {
     super();
+    this.isPopUpModalActive = false;
   }
 
   // --------------------------------------------------------------------------
@@ -74,8 +76,12 @@ class Trending extends Vue {
   /**
    * getTrends
    */
-   public getTrends() {
+  public getTrends() {
     return this.trends;
+  }
+  
+  public getPopUp() {
+    return this.isPopUpModalActive;
   }
 
   // --------------------------------------------------------------------------
