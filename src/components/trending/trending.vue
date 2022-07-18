@@ -33,7 +33,7 @@
           </div>
         </div>
         <!-- V-For Loop | Test -->
-        <div class="trend [ py-3 px-4 ]" v-for="(trend, index) in getTrends()">
+        <div class="trend [ py-3 px-4 ]" v-for="(trend, index) in trends">
           <div class="[ flex flex-col ]">
             <div class="[ flex flex-row justify-between items-center ]">
               <p class="[ text-sm text-twittergreyt ]">{{ trend.location }}</p>
@@ -96,7 +96,7 @@
             <p class="[ text-twittergreyt ]">@elonmusk</p>
           </div>
           <div class="[ ml-auto ][ flex items-center ]">
-            <b-button class="[ bg-black text-white ][ px-4 py-1 ml-3 ][ font-bold ][ rounded-3xl ][ text-base ]" label="Unfollow" type="is-primary" @click="isPopUpModalActive = true" />
+            <b-button class="[ bg-black text-white ][ px-4 py-1 ml-3 ][ font-bold ][ rounded-3xl ][ text-base ]" label="Unfollow" type="is-primary" @click="active = true" />
           </div>
         </div>
         <div class="[ p-4 ]">
@@ -104,7 +104,7 @@
         </div>
       </div>
 
-      <b-modal v-model="isPopUpModalActive">
+      <b-modal v-model="active">
         <div class="[ rounded-2xl ][ p-8 ]">
           <div class="[ flex flex-col ]">
             <h1 class="[ mb-2 ][ leading-6 text-xl font-bold ]">Unfollow ...</h1>

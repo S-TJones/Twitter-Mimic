@@ -1,4 +1,5 @@
-import { Component, Prop, Vue } from 'vue-property-decorator';
+import { AppStore } from '@/store/app';
+import { Component, Prop, Vue, Watch } from 'vue-property-decorator';
 
 @Component({
   components: {},
@@ -10,8 +11,9 @@ class Trending extends Vue {
   // --------------------------------------------------------------------------
   // Fields
   // --------------------------------------------------------------------------
-  private isPopUpModalActive: boolean = false;
-  private readonly trends: {location: string; name: string; tweet_count: string}[] = [
+  public active = false;
+  
+  public trends: {location: string; name: string; tweet_count: string}[] = [
     {
       'location': 'Trending in Jamaica',
       'name': 'WhatsApp',
@@ -63,7 +65,6 @@ class Trending extends Vue {
   // --------------------------------------------------------------------------
   constructor() {
     super();
-    this.isPopUpModalActive = false;
   }
 
   // --------------------------------------------------------------------------
@@ -79,15 +80,21 @@ class Trending extends Vue {
   public getTrends() {
     return this.trends;
   }
-  
-  public getPopUp() {
-    return this.isPopUpModalActive;
-  }
 
   // --------------------------------------------------------------------------
   // Event Handlers
   // --------------------------------------------------------------------------
+  // @Watch('getPopUp')
+  // public onGetPopUpChange(val: boolean) {
+    
+  //   alert('B: '+val);
+  //   this.active = val;
+  // }
 
+  @Watch('getTrends')
+  public onGetTrendsChange(val: []) {
+    this.trends = val;
+  }
   // --------------------------------------------------------------------------
   // Lifecycle Hooks
   // --------------------------------------------------------------------------
