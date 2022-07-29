@@ -6,7 +6,7 @@
       <p class="[ text-base ]">Home</p>
       <i class="[ h-8 w-12 ]"></i>
     </div>
-    <form class="[ pt-1 ][ w-full ]">
+    <form class="[ pt-1 ][ w-full ]" method="post">
       <div class="[  ]">
         <img src="@/assets/twitter/twitter_logo.jpg" alt="user_profile_pic" class="[ rounded-full h-16 w-16 ][ flex items-center justify-center ]">
       </div>
@@ -135,7 +135,7 @@
             <div class="[ pt-3 ][ mb-1 ]"></div>
             <div class="[ flex flex-row ]">
               <div class="[ mr-3 ][ flex-shrink-0 flex justify-center ]">
-                <img src="@/assets/twitter/Marques_Brownlee_cropped.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
+                <img src="@/assets/twitter/vulkno.jpg" alt="user_profile_pic" class="[ h-12 w-12 ][ flex items-center justify-center ]" style="border-radius: 50%;">
               </div>
               <div class="[ pb-3 ][ flex flex-col justify-center ]">
                 <div class="[ mb-1 ][ flex flex-row justify-between items-start ]">
@@ -143,7 +143,7 @@
                   <div class="[ ml-5 ][ h-5 ][ flex justify-center items-center text-center ]">...</div>
                 </div>
                 <div>
-                  <div class="post-text [ w-full ]">
+                  <div class="post-text [ w-full ]" @click="editPost()">
                     {{ post.pData }}
                   </div>
                   <div class="post-image [ mt-3 ]">

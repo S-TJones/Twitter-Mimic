@@ -1,3 +1,4 @@
+import { TransactionService } from '@/services/transaction-service';
 import { AppStore } from '@/store/app';
 import { Component, Vue } from 'vue-property-decorator';
 
@@ -9,7 +10,7 @@ class Dash extends Vue {
   // --------------------------------------------------------------------------
   // Fields
   // --------------------------------------------------------------------------
-  public newTweet = "";
+  public newTweet = '';
   public data = [
     { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016/10/15 13:43:27', 'gender': 'Male' },
     { 'id': 2, 'first_name': 'John', 'last_name': 'Jacobs', 'date': '2016/12/15 06:00:53', 'gender': 'Male' },
@@ -121,8 +122,12 @@ class Dash extends Vue {
   /**
    * getPostData
    */
-  public sendPostData(postData: string) {
-    AppStore.createPost(postData);
+  public async sendPostData(postData: string) {
+    await AppStore.createPost(postData);
+  }
+
+  public async editPost(){
+    await AppStore.updatePost();
   }
 
   // --------------------------------------------------------------------------
@@ -132,8 +137,9 @@ class Dash extends Vue {
   // --------------------------------------------------------------------------
   // Lifecycle Hooks
   // --------------------------------------------------------------------------
-  public mounted() {
+  public async mounted() {
     // TODO: stuff to do when this component loads.
+    await AppStore.loadData();
   }
 }
 

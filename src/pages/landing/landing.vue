@@ -7,7 +7,7 @@
         <div id="image" class="[ w-full h-full ][ bg-cover bg-no-repeat bg-center ][ overflow-hidden ]"></div>
       </div>
       
-      <div id="right" class="[ flex justify-center flex-col p-4 ]">
+      <div id="right" class="[ flex justify-center flex-col ][ p-6 ]">
         <div class="[  ]">
           <img src="@/assets/twitter/twitter_logo.jpg" alt="twitter logo" class="[ h-12 w-12 ]">
         </div>
@@ -30,7 +30,9 @@
         </div>
         <div class="[ mt-10 ]">
           <p class="[ font-medium mb-5 leading-5 text-base ]">Already have an account?</p>
+          <router-link :to="{ path: '/dashboard' }">
           <button class="[ py-1 px-2 text-twitterblue bg-white border-twitterblue no-underline border text-center w-64 rounded-3xl ]">Sign In</button>
+          </router-link>
         </div>
       </div>
     </div>

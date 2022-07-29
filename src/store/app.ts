@@ -1,5 +1,6 @@
 import { Post } from '@/entities';
 import { getMultiParamModule, MultiParamAction } from '@/modules/core';
+import { TransactionService } from '@/services/transaction-service';
 import { Module, Mutation, VuexModule } from 'vuex-module-decorators';
 import store from './index';
 
@@ -10,7 +11,9 @@ class Store extends VuexModule {
   private fooBarVal = 'TESTING';
 
   // Post Data
-  private _twitterPosts: Post[] = [];
+  private _twitterPosts: Post[] = [{
+    pName: 'Shemar Jones', pTag: '@Vul_K_No', pTime: '4h', pData: 'New Post on Twitter!'
+  }];
 
   // ------------------------------------------------------------------------
   // Getters
@@ -29,6 +32,20 @@ class Store extends VuexModule {
   // ------------------------------------------------------------------------
 
   @MultiParamAction()
+  public async loadData() {
+    const response = await TransactionService.getData();
+
+    if (response.success === true) {
+      console.log(response.data);
+      const newPost: Post = {
+        pName: 'Shemar Jones', pTag: '@Vul_K_No', pTime: '4h', pData: 'Testing a GET request!!'
+      };
+      this.addPost(newPost);
+    }
+  }
+
+
+  @MultiParamAction()
   public initializeFooBar() {
     this.setFooBar('Hello World');
   }
@@ -44,8 +61,32 @@ class Store extends VuexModule {
   }
 
   @MultiParamAction()
-  public createPost(value: string) {
-    this.addPost(value);
+  public async createPost(value: string) {
+    const newPost: Post = {
+      pName: 'Shemar Jones', pTag: '@Vul_K_No', pTime: '4h', pData: value
+    };
+
+    const response = await TransactionService.postData(newPost);
+    if (response.success === true) {
+      // newPost.id = response.data.id;
+      this.addPost(newPost);
+    }
+  }
+
+  @MultiParamAction({ rawError: true})
+  public async updatePost() {
+
+    const response = await TransactionService.putData();
+
+    if (response.success === true) {
+      console.log("The response is: " + JSON.stringify(response.data.obj));
+      
+      // Get new Post data
+      let postObj = response.data.obj;
+      
+      // Replace old Post with New one
+      this.replacePost(postObj);
+    }
   }
 
   // ------------------------------------------------------------------------
@@ -61,12 +102,26 @@ class Store extends VuexModule {
    * addPost
    */
   @Mutation
-  private addPost(post: string) {
-    const newPost = {
-      pName: 'Shemar Jones', pTag: '@Vul_K_No', pTime: '4h', pData: post
-    };
+  private addPost(post: Post) {
+    this._twitterPosts.push(post);
+  }
 
-    this._twitterPosts.push(newPost);
+  // Insert post into original spot/ Replace post
+  @Mutation
+  private replacePost(obj:any) {
+    let postM = obj.postMessage;
+    let id = obj.postId;
+
+    console.log("This list: " + JSON.stringify(this._twitterPosts));
+    console.log("The ID is: " + id);
+    console.log("The post is: " + JSON.stringify(this._twitterPosts[id]));
+    console.log("The new message is: " + postM);
+
+    const newPost: Post = {
+      pName: 'Shemar Jones', pTag: '@Vul_K_No', pTime: '4h', pData: postM
+    };
+    this._twitterPosts.splice(id, 1, newPost);
+    console.log("The new list: " + JSON.stringify(this._twitterPosts));
   }
 }
 

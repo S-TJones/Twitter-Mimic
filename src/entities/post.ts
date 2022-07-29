@@ -3,4 +3,6 @@ export type Post = {
   pTag: string;
   pTime: string;
   pData: string;
-}
+  hasImage?: boolean;
+  hasTable?: boolean;
+};
