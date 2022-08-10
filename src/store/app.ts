@@ -73,8 +73,20 @@ class Store extends VuexModule {
     }
   }
 
+  @MultiParamAction()
+  public async getRidOfPost(value: number) {
+
+    const response = await TransactionService.deleteData();
+    if (response.success === true) {
+      // newPost.id = response.data.id;
+      this.deletePost(value);
+    } else {
+      console.log("ERROR on DELETE");
+    }
+  }
+
   @MultiParamAction({ rawError: true})
-  public async updatePost() {
+  public async updatePost(editData: string, editNum: number) {
 
     const response = await TransactionService.putData();
 
@@ -82,7 +94,15 @@ class Store extends VuexModule {
       console.log("The response is: " + JSON.stringify(response.data.obj));
       
       // Get new Post data
+      response.data.obj.postId = editNum;
+      response.data.obj.postMessage = editData;
       let postObj = response.data.obj;
+      // let postObj = {
+      //     "obj":{
+      //       "postId": editNum,
+      //       "postMessage": editData
+      //   }
+      // };
       
       // Replace old Post with New one
       this.replacePost(postObj);
@@ -104,6 +124,11 @@ class Store extends VuexModule {
   @Mutation
   private addPost(post: Post) {
     this._twitterPosts.push(post);
+  }
+
+  @Mutation
+  private deletePost(indexNum: number) {
+    this._twitterPosts.splice(indexNum, 1);
   }
 
   // Insert post into original spot/ Replace post

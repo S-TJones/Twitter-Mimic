@@ -128,7 +128,7 @@
       </div>
     </div>
     <!--  -->
-    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ]" v-for="post in tPosts">
+    <div class="post [ w-full ][ text-sm ][ border-b border-twittergrey ]" v-for="(post, index) in tPosts">
       <div class="[ px-4 ][ w-full ]">
         <div class="[ flex flex-col flex-shrink flex-grow ]">
           <div class="[ flex flex-col ]">
@@ -140,11 +140,20 @@
               <div class="[ pb-3 ][ flex flex-col justify-center ]">
                 <div class="[ mb-1 ][ flex flex-row justify-between items-start ]">
                   <div>{{ post.pName }} <i></i> {{ post.pTag }} · {{ post.pTime }}</div>
-                  <div class="[ ml-5 ][ h-5 ][ flex justify-center items-center text-center ]">...</div>
+                  <div class="[ ml-5 ][ h-5 ][ flex justify-center items-center text-center ]">
+                    ...
+                    <button @click="removePost(index)" class="[ cursor-pointer ]">
+                      <b-icon icon="ban" size="is-small"></b-icon>
+                    </button>
+                  </div>
                 </div>
                 <div>
-                  <div class="post-text [ w-full ]" @click="editPost()">
-                    {{ post.pData }}
+                  <div class="post-text [ w-full ]">
+                    <p>{{ post.pData }}</p>
+                    <form action="#">
+                      <input type="text" class="w-full" v-model="editTweet">
+                      <button type="button" @click="editPost(editTweet, index)"><b-icon icon="pen-square" size="is-small"></b-icon>EDIT</button>
+                    </form>
                   </div>
                   <div class="post-image [ mt-3 ]">
                     <div><img src="" alt="" class="[  ]"></div>
@@ -198,7 +207,6 @@
                       :striped="striped"
                       :narrowed="narrowed"
                       :hoverable="hoverable"
-                      :loading="loading"
                       :focusable="focusable"
                       :mobile-cards="mobileCards">
 

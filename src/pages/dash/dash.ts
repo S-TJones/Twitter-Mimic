@@ -11,6 +11,7 @@ class Dash extends Vue {
   // Fields
   // --------------------------------------------------------------------------
   public newTweet = '';
+  public editTweet = '';
   public data = [
     { 'id': 1, 'first_name': 'Jesse', 'last_name': 'Simmons', 'date': '2016/10/15 13:43:27', 'gender': 'Male' },
     { 'id': 2, 'first_name': 'John', 'last_name': 'Jacobs', 'date': '2016/12/15 06:00:53', 'gender': 'Male' },
@@ -126,8 +127,13 @@ class Dash extends Vue {
     await AppStore.createPost(postData);
   }
 
-  public async editPost(){
-    await AppStore.updatePost();
+  public async editPost(editData: string, editNum: number){
+    await AppStore.updatePost(editData, editNum);
+  }
+
+  public async removePost(editNum: number){
+    // console.log("Called DELETE method");
+    await AppStore.getRidOfPost(editNum);
   }
 
   // --------------------------------------------------------------------------

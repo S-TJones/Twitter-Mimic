@@ -82,6 +82,27 @@ class TransactionService extends BaseService {
       });
   }
 
+  public async deleteData(): Promise<ServiceResult> {
+    // define custom request options [NB: default config found in @/services/base]
+    const options = {};
+    const result: ServiceResult = { success: false };
+
+    return this.api
+      .delete('/dashboard', options)
+      .then((response: AxiosResponse) => {
+        // handle response here
+        const { status, data } = response;
+        result.success = status === StatusCode.OK;
+        result.data = data;
+        // console.log("DELETE RESULT: " + JSON.stringify(data));
+
+        return result;
+      })
+      .catch((err) => {
+        return result;
+      });
+  }
+
   public async getData(): Promise<ServiceResult> {
     // define custom request options [NB: default config found in @/services/base]
     const options = {};
