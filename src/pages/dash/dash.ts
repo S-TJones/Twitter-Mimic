@@ -28,6 +28,7 @@ class Dash extends Vue {
   public isHoverable = false;
   public isFocusable = false;
   public isLoading = false;
+  public isOpenIndex = -1;
   public hasMobileCards = true;
 
   // --------------------------------------------------------------------------
@@ -89,6 +90,12 @@ class Dash extends Vue {
   // --------------------------------------------------------------------------
   // Methods
   // --------------------------------------------------------------------------
+
+  public openForm(index: number) {
+    console.log(index);
+    this.isOpenIndex = index;
+  }
+
   public dateThAttrs(column:any) {
     return column.label === 'Date' ? {
       title: 'This title is sponsored by "th-attrs" prop',

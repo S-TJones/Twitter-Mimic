@@ -37,7 +37,9 @@ import {
   faMars,
   faVenus,
   faPenSquare,
-  faBan
+  faBan,
+  faTimes,
+  faEdit,
 } from '@fortawesome/free-solid-svg-icons';
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome';
 import Vue from 'vue';
@@ -79,7 +81,9 @@ library.add(
   faMars,
   faVenus,
   faPenSquare,
-  faBan
+  faBan,
+  faTimes,
+  faEdit
 );
 
 const FONT_AWESOME_COMPONENT = 'font-awesome-icon';

@@ -143,16 +143,16 @@
                   <div class="[ ml-5 ][ h-5 ][ flex justify-center items-center text-center ]">
                     ...
                     <button @click="removePost(index)" class="[ cursor-pointer ]">
-                      <b-icon icon="ban" size="is-small"></b-icon>
+                      <b-icon icon="trash-alt" size="is-small"></b-icon>
                     </button>
                   </div>
                 </div>
                 <div>
                   <div class="post-text [ w-full ]">
                     <p>{{ post.pData }}</p>
-                    <form action="#">
+                    <form action="#" v-show="index === isOpenIndex">
                       <input type="text" class="w-full" v-model="editTweet">
-                      <button type="button" @click="editPost(editTweet, index)"><b-icon icon="pen-square" size="is-small"></b-icon>EDIT</button>
+                      <button type="button" @click="editPost(editTweet, index)"><b-icon icon="edit" size="is-small"></b-icon>EDIT</button>
                     </form>
                   </div>
                   <div class="post-image [ mt-3 ]">
@@ -160,7 +160,7 @@
                     <div></div>
                   </div>
                   <div class="post-buttons [ flex flex-row justify-between ][ mt-3 ]">
-                    <div class="[ flex justify-start items-center ]">
+                    <div @click="openForm(index)" class="[ flex justify-start items-center ]">
                       <b-icon icon="comment" size="is-small"></b-icon>
                       <p class="[ px-3 ]">343</p>
                     </div>
