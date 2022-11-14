@@ -41,6 +41,7 @@
     "ws": "^7.4.5"
   },
   "devDependencies": {
+    "@testing-library/vue": "^5.8.3",
     "@types/node": "^10.14.8",
     "@vue/cli-plugin-babel": "^3.4.0",
     "@vue/cli-plugin-typescript": "^3.4.0",

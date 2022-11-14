@@ -12,6 +12,7 @@ export enum Page {
   TLanding = 't-landing',
   TDash = 't-dash',
   TNotifi = 't-notifi',
+  Success = 'success',
 }
 
 export default new Router({
@@ -70,6 +71,17 @@ export default new Router({
         import(
           /* webpackChunkName: "Notification" */
           '@/pages/notification'),
+    },
+    {
+      path: '/success',
+      name: Page.Success,
+      meta: {
+        layout: 'home',
+      },
+      component: () =>
+        import(
+          /* webpackChunkName: "Success" */
+          '@/pages/success'),
     },
     {
       path: '*',
